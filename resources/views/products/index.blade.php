@@ -8,6 +8,13 @@
 <body>
     <h1>Product</h1>
     <div>
+        @if(session()->has('success'))
+            <div>
+                {{ session('success') }}
+            </div>
+            @endif
+    </div>
+    <div>
         <table border="1">
             <thead>
                 <tr>
@@ -16,6 +23,8 @@
                     <th>Price</th>
                     <th>Description</th>
                     <th>Edit</th>
+                    <th>Delete</th>
+
 
                 </tr>
             </thead>
